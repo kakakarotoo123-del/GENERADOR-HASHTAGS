@@ -10,7 +10,7 @@
   <link rel="canonical" href="https://tools.xailon.site/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Free Hashtag Generator 2025 | xailon.site" />
+  <meta property="og:title" content="Free Hashtag Generator 2026 | xailon.site" />
   <meta property="og:description" content="Get the best hashtags for Instagram, TikTok, LinkedIn and YouTube. Free, fast and easy." />
   <meta property="og:url" content="https://tools.xailon.site/" />
   <meta property="og:type" content="website" />
@@ -27,15 +27,11 @@
     }
 
     :root {
-      --bg: #08090d;
+      --bg: #07080c;
       --surface: #0f1117;
       --border: #1e2130;
       --text: #e8eaf0;
       --muted: #8b93a7;
-      --ig: #e1306c;
-      --tt: #ff2d55;
-      --li: #0a66c2;
-      --yt: #ff0000;
     }
 
     body {
@@ -45,7 +41,6 @@
       min-height: 100vh;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
       text-rendering: optimizeLegibility;
     }
 
@@ -54,8 +49,8 @@
       position: fixed;
       inset: 0;
       background:
-        radial-gradient(circle at 20% 20%, rgba(225,48,108,0.08), transparent 60%),
-        radial-gradient(circle at 80% 80%, rgba(10,102,194,0.08), transparent 60%);
+        radial-gradient(circle at 20% 20%, rgba(120,119,198,0.15), transparent 60%),
+        radial-gradient(circle at 80% 80%, rgba(255,45,85,0.10), transparent 60%);
       pointer-events: none;
       z-index: 0;
     }
@@ -69,56 +64,63 @@
     }
 
     header {
-      padding: 60px 0 40px;
+      padding: 80px 0 50px;
       text-align: center;
     }
 
     .badge {
       display: inline-block;
-      background: rgba(225,48,108,0.15);
-      border: 1px solid rgba(225,48,108,0.4);
-      color: var(--ig);
+      background: rgba(120,119,198,0.15);
+      border: 1px solid rgba(120,119,198,0.4);
+      color: #9f9cff;
       font-size: 12px;
       font-weight: 500;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      padding: 8px 18px;
+      padding: 8px 20px;
       border-radius: 100px;
-      margin-bottom: 24px;
+      margin-bottom: 30px;
     }
 
     h1 {
       font-family: 'Poppins', sans-serif;
-      font-size: clamp(2rem, 6vw, 3.2rem);
-      font-weight: 700;
-      line-height: 1.2;
-      margin-bottom: 20px;
+      font-size: clamp(2.2rem, 6vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 24px;
+      background: linear-gradient(90deg, #ffffff, #b4b9ff, #ff8ac7);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shine 6s linear infinite;
     }
 
-    h1 span {
-      color: var(--ig);
+    @keyframes shine {
+      to {
+        background-position: 200% center;
+      }
     }
 
     .subtitle {
       color: var(--muted);
-      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
-      max-width: 620px;
-      margin: 0 auto 48px;
-      line-height: 1.7;
+      font-size: clamp(1rem, 2.5vw, 1.15rem);
+      max-width: 650px;
+      margin: 0 auto 60px;
+      line-height: 1.8;
     }
 
     .ad-slot {
       background: var(--surface);
       border: 1px dashed var(--border);
-      border-radius: 16px;
-      padding: 24px;
+      border-radius: 18px;
+      padding: 28px;
       text-align: center;
       color: var(--muted);
       font-size: 13px;
       letter-spacing: 1px;
       text-transform: uppercase;
-      margin-bottom: 48px;
-      min-height: 90px;
+      margin-bottom: 50px;
+      min-height: 100px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -126,109 +128,106 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 24px;
-      margin-bottom: 48px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 28px;
+      margin-bottom: 60px;
     }
 
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 32px 24px;
+      border-radius: 28px;
+      padding: 36px 26px;
       text-align: center;
       text-decoration: none;
       color: var(--text);
-      transition: all 0.25s ease;
+      transition: all 0.3s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 14px;
+      gap: 16px;
     }
 
     .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 25px 70px rgba(0,0,0,0.5);
+      transform: translateY(-8px);
+      box-shadow: 0 30px 80px rgba(0,0,0,0.6);
     }
 
     .card-icon {
-      width: 60px;
-      height: 60px;
-      border-radius: 18px;
+      width: 64px;
+      height: 64px;
+      border-radius: 20px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 28px;
+      font-size: 30px;
+      background: rgba(255,255,255,0.05);
     }
-
-    .card.ig .card-icon { background: rgba(225,48,108,0.15); }
-    .card.tt .card-icon { background: rgba(255,45,85,0.15); }
-    .card.li .card-icon { background: rgba(10,102,194,0.15); }
-    .card.yt .card-icon { background: rgba(255,0,0,0.15); }
 
     .card-name {
       font-family: 'Poppins', sans-serif;
-      font-size: 1.15rem;
+      font-size: 1.2rem;
       font-weight: 600;
     }
 
     .card-desc {
       color: var(--muted);
-      font-size: 0.9rem;
-      line-height: 1.6;
+      font-size: 0.95rem;
+      line-height: 1.7;
     }
 
     .card-cta {
-      margin-top: 10px;
-      font-size: 0.85rem;
+      margin-top: 12px;
+      font-size: 0.9rem;
       font-weight: 500;
-      padding: 8px 22px;
+      padding: 9px 24px;
       border-radius: 100px;
       border: 1px solid var(--border);
       color: var(--muted);
-      transition: all 0.2s ease;
+      transition: all 0.25s ease;
     }
 
-    .card.ig:hover .card-cta { background: var(--ig); border-color: var(--ig); color: white; }
-    .card.tt:hover .card-cta { background: var(--tt); border-color: var(--tt); color: white; }
-    .card.li:hover .card-cta { background: var(--li); border-color: var(--li); color: white; }
-    .card.yt:hover .card-cta { background: var(--yt); border-color: var(--yt); color: white; }
+    .card:hover .card-cta {
+      background: white;
+      color: black;
+      border-color: white;
+    }
 
     .faq {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 40px;
-      margin-bottom: 60px;
+      border-radius: 28px;
+      padding: 50px;
+      margin-bottom: 70px;
     }
 
     .faq h2 {
       font-family: 'Poppins', sans-serif;
-      font-size: 1.6rem;
-      margin-bottom: 28px;
+      font-size: 1.7rem;
+      margin-bottom: 30px;
     }
 
     .faq-item {
-      margin-bottom: 22px;
+      margin-bottom: 24px;
     }
 
     .faq-item h3 {
-      font-size: 1rem;
+      font-size: 1.05rem;
       font-weight: 600;
       margin-bottom: 8px;
     }
 
     .faq-item p {
       color: var(--muted);
-      font-size: 0.95rem;
-      line-height: 1.7;
+      font-size: 1rem;
+      line-height: 1.8;
     }
 
     footer {
       text-align: center;
-      padding: 40px 0;
+      padding: 50px 0;
       color: var(--muted);
-      font-size: 0.85rem;
+      font-size: 0.9rem;
       border-top: 1px solid var(--border);
     }
 
@@ -238,16 +237,16 @@
     }
 
     footer a:hover {
-      color: var(--text);
+      color: white;
     }
 
     @media (max-width: 480px) {
       header {
-        padding: 40px 0 24px;
+        padding: 60px 0 30px;
       }
 
       h1 {
-        font-size: 1.9rem;
+        font-size: 2rem;
       }
 
       .grid {
@@ -260,7 +259,7 @@
   <div class="container">
     <header>
       <div class="badge">100% Free Tool</div>
-      <h1>Free <span>Hashtag</span><br>Generator 2025</h1>
+      <h1>Free Hashtag Generator 2026</h1>
       <p class="subtitle">
         Get the best hashtags for your niche in seconds. Boost your reach on Instagram, TikTok, LinkedIn and YouTube — no signup required.
       </p>
@@ -271,28 +270,28 @@
     </div>
 
     <div class="grid">
-      <a href="instagram.html" class="card ig">
+      <a href="instagram.html" class="card">
         <div class="card-icon">📸</div>
         <div class="card-name">Instagram</div>
         <div class="card-desc">Up to 30 hashtags to maximize your reach and explore page visibility.</div>
         <div class="card-cta">Generate →</div>
       </a>
 
-      <a href="tiktok.html" class="card tt">
+      <a href="tiktok.html" class="card">
         <div class="card-icon">🎵</div>
         <div class="card-name">TikTok</div>
         <div class="card-desc">Trending hashtags to get your videos on the For You Page fast.</div>
         <div class="card-cta">Generate →</div>
       </a>
 
-      <a href="linkedin.html" class="card li">
+      <a href="linkedin.html" class="card">
         <div class="card-icon">💼</div>
         <div class="card-name">LinkedIn</div>
         <div class="card-desc">Professional hashtags to grow your network and personal brand.</div>
         <div class="card-cta">Generate →</div>
       </a>
 
-      <a href="youtube.html" class="card yt">
+      <a href="youtube.html" class="card">
         <div class="card-icon">▶️</div>
         <div class="card-name">YouTube</div>
         <div class="card-desc">Video hashtags to improve your SEO and suggested video placement.</div>
@@ -330,7 +329,7 @@
   </div>
 
   <footer>
-    <p>© 2025 <a href="https://xailon.site">xailon.site</a> · Free Hashtag Generator · <a href="#">Privacy Policy</a></p>
+    <p>© 2026 <a href="https://xailon.site">xailon.site</a> · Free Hashtag Generator · <a href="#">Privacy Policy</a></p>
   </footer>
 </body>
 </html>
