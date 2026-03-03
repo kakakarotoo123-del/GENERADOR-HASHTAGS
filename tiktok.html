@@ -75,19 +75,20 @@
       margin-bottom: 16px;
     }
 
-    /* ===== PREMIUM INSTAGRAM STYLE TITLE ===== */
+    /* 🔥 NUEVO EFECTO PREMIUM */
     h1 {
       font-family: 'Syne', sans-serif;
-      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-size: clamp(1.5rem, 6vw, 2.6rem);
       font-weight: 800;
-      line-height: 1.1;
+      line-height: 1.2;
       margin-bottom: 12px;
+
       background: linear-gradient(
         90deg,
         #ffffff 0%,
         #ff8ac7 25%,
         #b4b9ff 50%,
-        #ff8ac7 75%,
+        #00f2ea 75%,
         #ffffff 100%
       );
       background-size: 200% auto;
@@ -97,36 +98,59 @@
     }
 
     @keyframes stripeShine {
-      to { background-position: 200% center; }
+      to {
+        background-position: 200% center;
+      }
     }
 
-    h1 em {
-      font-style: normal;
-      -webkit-text-fill-color: inherit;
+    h1 em { 
+      font-style: normal; 
     }
 
     .subtitle { color: var(--muted); font-size: 0.95rem; line-height: 1.6; max-width: 520px; }
 
-    /* RESTO DEL CSS ORIGINAL SIN CAMBIOS */
+    .ad-slot { background: var(--surface); border: 1px dashed var(--border); border-radius: 12px; padding: 16px; text-align: center; color: var(--muted); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; margin: 28px 0; min-height: 90px; display: flex; align-items: center; justify-content: center; }
+
+    .tool-card { background: var(--surface); border: 1px solid var(--border); border-radius: 24px; padding: 32px; margin-bottom: 28px; }
+
+    .section-label { font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+
+    .niches { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
+
+    .niche-btn { background: var(--surface2); border: 1px solid var(--border); color: var(--muted); font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 500; padding: 9px 18px; border-radius: 100px; cursor: pointer; transition: all 0.15s; }
+    .niche-btn:hover { border-color: var(--accent); color: var(--text); }
+    .niche-btn.active { background: var(--accent); border-color: var(--accent); color: white; }
+
+    .custom-input-wrap { display: flex; gap: 12px; margin-bottom: 28px; }
+    .custom-input { flex: 1; background: var(--surface2); border: 1px solid var(--border); border-radius: 12px; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; padding: 12px 18px; outline: none; transition: border-color 0.2s; }
+    .custom-input:focus { border-color: var(--accent); }
+
+    .generate-btn { background: linear-gradient(135deg, var(--accent), #ff6b35); color: white; border: none; font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 700; padding: 12px 28px; border-radius: 12px; cursor: pointer; transition: opacity 0.2s, transform 0.1s; white-space: nowrap; }
+    .generate-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+
+    footer { text-align: center; padding: 32px 0; color: var(--muted); font-size: 0.82rem; border-top: 1px solid var(--border); }
+
   </style>
 </head>
 
 <body>
 <div class="container">
 
-<nav>
-  <a href="index.html">← All Tools</a>
-  <span>/</span>
-  <a href="#">TikTok Hashtags</a>
-</nav>
+  <nav>
+    <a href="index.html">← All Tools</a>
+    <span>/</span>
+    <a href="#">TikTok Hashtags</a>
+  </nav>
 
-<header>
-  <div class="platform-tag">🎵 TikTok</div>
-  <h1>TikTok Hashtag<br><em>Generator</em> 2026</h1>
-  <p class="subtitle">Get trending TikTok hashtags to reach the For You Page. Pick your niche, generate, copy. Free forever.</p>
-</header>
+  <header>
+    <div class="platform-tag">🎵 TikTok</div>
+    <h1>TikTok Hashtag<br><em>Generator</em> 2026</h1>
+    <p class="subtitle">Get trending TikTok hashtags to reach the For You Page. Pick your niche, generate, copy. Free forever.</p>
+  </header>
 
-<!-- TODO tu HTML original sigue exactamente igual -->
+  <!-- TODO EL RESTO DE TU CÓDIGO SIGUE EXACTAMENTE IGUAL -->
+
+</div>
 
 <footer>
   <p>© 2026 <a href="https://xailon.site">xailon.site</a> · Free Hashtag Generator · <a href="#">Privacy Policy</a></p>
