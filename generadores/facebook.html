@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Generador de hashtags para Facebook</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+  <header class="top">
+    <div class="container">
+      <a class="brand" href="../index.html">
+        <span class="brand__logo">#</span>
+        <span class="brand__name">HashtagHub</span>
+      </a>
+
+      <nav class="nav">
+        <a class="nav__link" href="../index.html#generadores">Generadores</a>
+        <a class="nav__link" href="../index.html#ads">Publicidad</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="padding: 1.6rem 0 2rem;">
+    <h1><i class="fa-brands fa-facebook"></i> Generador para Facebook</h1>
+    <p>En Facebook suele funcionar usar pocos hashtags y bien alineados al contenido (por ejemplo 2–3). [web:28]</p>
+
+    <section class="ads__box" style="margin: 1rem 0;">
+      <label for="texto" style="font-weight:800;">Tu publicación (tema / servicio / ciudad)</label>
+      <textarea id="texto" rows="5" style="width:100%; margin-top:.5rem; padding:.8rem; border-radius:14px; border:1px solid rgba(255,255,255,.12); background: rgba(0,0,0,.18); color: rgba(255,255,255,.92);"></textarea>
+
+      <div style="display:flex; gap:.8rem; flex-wrap:wrap; margin-top:.9rem;">
+        <button id="btnGenerar" class="btn btn--primary" type="button">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> Generar
+        </button>
+        <button id="btnCopiar" class="btn btn--ghost" type="button">
+          <i class="fa-regular fa-copy"></i> Copiar
+        </button>
+        <a class="btn btn--ghost" href="../index.html">
+          <i class="fa-solid fa-arrow-left"></i> Volver
+        </a>
+      </div>
+
+      <div style="margin-top:1rem;">
+        <label for="salida" style="font-weight:800;">Hashtags (máx. 3)</label>
+        <textarea id="salida" rows="6" readonly style="width:100%; margin-top:.5rem; padding:.8rem; border-radius:14px; border:1px solid rgba(255,255,255,.12); background: rgba(0,0,0,.18); color: rgba(255,255,255,.92);"></textarea>
+        <p class="muted" style="margin-top:.6rem;">Si quieres, puedes añadir 1 hashtag de marca (ej: #TuMarca).</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="../assets/app.js"></script>
+  <script>
+    const BASE_FB = ["facebook", "comunidad", "negocios"];
+    const STOP = new Set(["de","la","el","y","o","para","por","con","sin","una","un","unas","unos","en","a","al","del","que","como","es","mi","tu","sus","se","lo"]);
+
+    function normalizar(s){
+      return (s || "")
+        .toLowerCase()
+        .normalize("NFD").replace(/[̀-ͯ]/g, "")
+        .replace(/[^a-z0-9s]/g, " ")
+        .replace(/s+/g, " ")
+        .trim();
+    }
+
+    function tokens(s){
+      return normalizar(s).split(" ").filter(w => w && w.length >= 3 && !STOP.has(w));
+    }
+
+    function hashtag(w){ return "#" + w.replace(/s/g,""); }
+
+    function generarHashtags(texto){
+      const t = [...new Set(tokens(texto))];
+
+      const chosen = [
+        ...t.slice(0,2),
+        ...BASE_FB.slice(0,1)
+      ];
+
+      return [...new Set(chosen)].slice(0,3).map(hashtag).join(" ");
+    }
+
+    document.getElementById("btnGenerar").addEventListener("click", () => {
+      const texto = document.getElementById("texto").value;
+      document.getElementById("salida").value = generarHashtags(texto);
+    });
+
+    document.getElementById("btnCopiar").addEventListener("click", async () => {
+      const out = document.getElementById("salida").value;
+      if(!out) return;
+      try{
+        await navigator.clipboard.writeText(out);
+      }catch(e){
+        const el = document.getElementById("salida");
+        el.focus(); el.select();
+        document.execCommand("copy");
+      }
+    });
+  </script>
+</body>
+  </html>
