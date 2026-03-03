@@ -1,217 +1,114 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Instagram Hashtag Generator 2026 — Free Tool</title>
-<meta name="description" content="Generate the best Instagram hashtags instantly. Free Instagram hashtag generator for fitness, fashion, business, travel and more.">
-<meta name="robots" content="index, follow">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-
-body{
-background:#07080c;
-color:#e8eaf0;
-font-family:'Inter',sans-serif;
-min-height:100vh;
-padding:20px;
--webkit-font-smoothing:antialiased;
-}
-
-.container{
-max-width:800px;
-margin:auto;
-}
-
-nav{
-margin-bottom:40px;
-font-size:14px;
-color:#8b93a7;
-}
-
-h1{
-font-family:'Poppins',sans-serif;
-font-size:clamp(2rem,5vw,3.2rem);
-font-weight:800;
-line-height:1.1;
-margin-bottom:16px;
-background:linear-gradient(90deg,#ffffff,#ff8ac7,#b4b9ff,#ffffff);
-background-size:200% auto;
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-animation:shine 6s linear infinite;
-}
-
-@keyframes shine{
-to{background-position:200% center;}
-}
-
-.subtitle{
-color:#8b93a7;
-margin-bottom:40px;
-line-height:1.6;
-}
-
-.card{
-background:#11131a;
-border:1px solid #1e2130;
-border-radius:20px;
-padding:30px;
-margin-bottom:30px;
-}
-
-.niches{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-margin-bottom:20px;
-}
-
-.niche-btn{
-background:#151822;
-border:1px solid #1e2130;
-color:#8b93a7;
-padding:8px 16px;
-border-radius:50px;
-cursor:pointer;
-transition:.2s;
-font-size:14px;
-}
-
-.niche-btn:hover{
-border-color:#e1306c;
-color:#fff;
-}
-
-.niche-btn.active{
-background:#e1306c;
-color:#fff;
-border-color:#e1306c;
-}
-
-.generate-btn{
-margin-top:20px;
-background:linear-gradient(135deg,#ff8ac7,#e1306c);
-border:none;
-color:#fff;
-padding:12px 30px;
-border-radius:12px;
-cursor:pointer;
-font-weight:700;
-font-family:'Poppins',sans-serif;
-transition:.2s;
-}
-
-.generate-btn:hover{
-transform:translateY(-2px);
-opacity:.9;
-}
-
-.output{
-margin-top:30px;
-background:#0f1117;
-padding:20px;
-border-radius:12px;
-border:1px solid #1e2130;
-font-size:14px;
-line-height:1.6;
-word-wrap:break-word;
-}
-
-.copy-btn{
-margin-top:15px;
-background:#222;
-border:none;
-color:#fff;
-padding:8px 16px;
-border-radius:8px;
-cursor:pointer;
-}
-
-footer{
-margin-top:50px;
-text-align:center;
-color:#8b93a7;
-font-size:14px;
-}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Generador de hashtags para Instagram</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
-<div class="container">
+  <header class="top">
+    <div class="container">
+      <a class="brand" href="../index.html">
+        <span class="brand__logo">#</span>
+        <span class="brand__name">HashtagHub</span>
+      </a>
 
-<nav>← All Tools / Instagram Hashtags</nav>
+      <nav class="nav">
+        <a class="nav__link" href="../index.html#generadores">Generadores</a>
+        <a class="nav__link" href="../index.html#ads">Publicidad</a>
+      </nav>
+    </div>
+  </header>
 
-<h1>Instagram Hashtag Generator 2026</h1>
-<p class="subtitle">
-Pick your niche, generate up to 30 optimized hashtags, copy and paste into your Instagram post. Free forever.
-</p>
+  <main class="container" style="padding: 1.6rem 0 2rem;">
+    <h1><i class="fa-brands fa-instagram"></i> Generador para Instagram</h1>
+    <p>Pega tu texto (tema, producto, ciudad, tipo de contenido) y genera hashtags listos para copiar.</p>
 
-<div class="card">
+    <section class="ads__box" style="margin: 1rem 0;">
+      <label for="texto" style="font-weight:800;">Tu publicación</label>
+      <textarea id="texto" rows="5" style="width:100%; margin-top:.5rem; padding:.8rem; border-radius:14px; border:1px solid rgba(255,255,255,.12); background: rgba(0,0,0,.18); color: rgba(255,255,255,.92);"></textarea>
 
-<div class="niches">
-<button class="niche-btn" onclick="selectNiche(event,'fitness')">💪 Fitness</button>
-<button class="niche-btn" onclick="selectNiche(event,'fashion')">👗 Fashion</button>
-<button class="niche-btn" onclick="selectNiche(event,'business')">💼 Business</button>
-<button class="niche-btn" onclick="selectNiche(event,'travel')">✈️ Travel</button>
-<button class="niche-btn" onclick="selectNiche(event,'food')">🍔 Food</button>
-</div>
+      <div style="display:flex; gap:.8rem; flex-wrap:wrap; margin-top:.9rem;">
+        <button id="btnGenerar" class="btn btn--primary" type="button">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> Generar
+        </button>
+        <button id="btnCopiar" class="btn btn--ghost" type="button">
+          <i class="fa-regular fa-copy"></i> Copiar
+        </button>
+        <a class="btn btn--ghost" href="../index.html">
+          <i class="fa-solid fa-arrow-left"></i> Volver
+        </a>
+      </div>
 
-<button class="generate-btn" onclick="generateHashtags()">🚀 Generate Hashtags</button>
+      <div style="margin-top:1rem;">
+        <label for="salida" style="font-weight:800;">Hashtags</label>
+        <textarea id="salida" rows="6" readonly style="width:100%; margin-top:.5rem; padding:.8rem; border-radius:14px; border:1px solid rgba(255,255,255,.12); background: rgba(0,0,0,.18); color: rgba(255,255,255,.92);"></textarea>
+        <p class="muted" style="margin-top:.6rem;">Tip: en Instagram suele funcionar mezclar hashtags grandes + medianos + específicos del nicho.</p>
+      </div>
+    </section>
+  </main>
 
-<div id="output" class="output" style="display:none;"></div>
-<button id="copyBtn" class="copy-btn" style="display:none;" onclick="copyHashtags()">📋 Copy Hashtags</button>
+  <script src="../assets/app.js"></script>
+  <script>
+    const BASE_IG = [
+      "instagram", "instagood", "photooftheday", "reels", "explorepage",
+      "creadoresdecontenido", "emprendedores", "marketingdigital"
+    ];
 
-</div>
+    const STOP = new Set(["de","la","el","y","o","para","por","con","sin","una","un","unas","unos","en","a","al","del","que","como","es","mi","tu","sus","se","lo"]);
 
-<footer>
-© 2026 xailon.site — Free Instagram Tools
-</footer>
+    function normalizar(s){
+      return (s || "")
+        .toLowerCase()
+        .normalize("NFD").replace(/[̀-ͯ]/g, "")
+        .replace(/[^a-z0-9s]/g, " ")
+        .replace(/s+/g, " ")
+        .trim();
+    }
 
-</div>
+    function tokens(s){
+      return normalizar(s).split(" ").filter(w => w && w.length >= 3 && !STOP.has(w));
+    }
 
-<script>
-let selectedNiche = "";
+    function hashtag(w){
+      return "#" + w.replace(/s/g,"");
+    }
 
-const hashtags = {
-fitness: ["#fitness","#gym","#workout","#fitlife","#training","#health","#motivation","#fitnessmotivation","#bodybuilding","#gymlife","#cardio","#strong","#fit","#healthy","#exercise","#personaltrainer","#muscle","#abs","#fitnessmodel","#lifestyle","#fitnessaddict","#fitfam","#healthylifestyle","#weightloss","#nutrition","#gains","#instafit","#fitnessjourney","#fitnessgoals","#trainhard"],
+    function generarHashtags(texto){
+      const t = tokens(texto);
+      const top = [...new Set(t)].slice(0, 18); // evita demasiados
+      const mixto = [
+        ...BASE_IG.map(hashtag),
+        ...top.map(hashtag),
+        ...top.slice(0,6).map(w => hashtag(w + "colombia")),
+        ...top.slice(0,6).map(w => hashtag("tips" + w))
+      ];
 
-fashion: ["#fashion","#style","#outfit","#ootd","#fashionista","#instastyle","#streetstyle","#trend","#model","#fashionblogger","#look","#beauty","#clothes","#shopping","#designer","#luxury","#vogue","#fashionstyle","#styleinspo","#trendy","#instafashion","#lookbook","#fashiongram","#chic","#runway","#stylish","#fashionaddict","#fashiontrend","#glam","#fashionweek"],
+      // Quitar duplicados y limitar
+      return [...new Set(mixto)].slice(0, 30).join(" ");
+    }
 
-business: ["#business","#entrepreneur","#success","#startup","#marketing","#branding","#digitalmarketing","#hustle","#motivation","#leadership","#money","#investing","#ceo","#mindset","#goals","#onlinebusiness","#sales","#smallbusiness","#growth","#finance","#work","#innovation","#strategy","#network","#entrepreneurship","#businesstips","#productivity","#wealth","#mindsetmatters","#sidehustle"],
+    document.getElementById("btnGenerar").addEventListener("click", () => {
+      const texto = document.getElementById("texto").value;
+      document.getElementById("salida").value = generarHashtags(texto);
+    });
 
-travel: ["#travel","#wanderlust","#travelgram","#vacation","#explore","#adventure","#trip","#nature","#holiday","#travelling","#tourism","#backpacking","#photography","#travelphotography","#instatravel","#travelblogger","#beach","#mountains","#passport","#world","#traveladdict","#explorer","#traveltheworld","#sunset","#culture","#journey","#discover","#travelgoals","#travelmore","#roam"],
-
-food: ["#food","#foodie","#instafood","#delicious","#yummy","#foodphotography","#dinner","#lunch","#breakfast","#restaurant","#chef","#tasty","#foodlover","#homemade","#healthyfood","#cooking","#recipe","#dessert","#snack","#eat","#foodblogger","#foodstagram","#gourmet","#sweet","#fresh","#foodpics","#mealtime","#foodgram","#foodaddict","#nutrition"]
-};
-
-function selectNiche(event,niche){
-selectedNiche = niche;
-document.querySelectorAll(".niche-btn").forEach(btn=>btn.classList.remove("active"));
-event.target.classList.add("active");
-}
-
-function generateHashtags(){
-if(!selectedNiche){
-alert("Please select a niche first.");
-return;
-}
-
-let result = hashtags[selectedNiche].join(" ");
-document.getElementById("output").style.display="block";
-document.getElementById("copyBtn").style.display="inline-block";
-document.getElementById("output").innerText = result;
-}
-
-function copyHashtags(){
-let text = document.getElementById("output").innerText;
-navigator.clipboard.writeText(text);
-alert("Hashtags copied!");
-}
-</script>
-
+    document.getElementById("btnCopiar").addEventListener("click", async () => {
+      const out = document.getElementById("salida").value;
+      if(!out) return;
+      try{
+        await navigator.clipboard.writeText(out);
+      }catch(e){
+        // fallback
+        const el = document.getElementById("salida");
+        el.focus(); el.select();
+        document.execCommand("copy");
+      }
+    });
+  </script>
 </body>
 </html>
