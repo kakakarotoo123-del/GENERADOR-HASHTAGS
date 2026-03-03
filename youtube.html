@@ -1,208 +1,120 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YouTube Hashtag Generator 2025 — Free | xailon.site</title>
-  <meta name="description" content="Generate the best YouTube hashtags to boost your video SEO and get more views. Free hashtag generator for YouTube — perfect for any niche. Grow your channel today." />
-  <meta name="robots" content="index, follow" />
-  <meta name="keywords" content="youtube hashtag generator, best youtube hashtags, hashtags for youtube videos, youtube seo hashtags, get more views youtube 2025" />
-  <link rel="canonical" href="https://tools.xailon.site/youtube.html" />
-  <meta property="og:title" content="YouTube Hashtag Generator 2025 — Free | xailon.site" />
-  <meta property="og:description" content="Generate YouTube hashtags to improve SEO and get more views. Free and instant." />
-  <meta property="og:url" content="https://tools.xailon.site/youtube.html" />
-  <meta property="og:type" content="website" />
-  <script type="application/ld+json">
-  { "@context": "https://schema.org", "@type": "WebApplication", "name": "YouTube Hashtag Generator", "url": "https://tools.xailon.site/youtube.html", "description": "Free YouTube hashtag generator for any niche", "applicationCategory": "UtilityApplication", "operatingSystem": "Web" }
-  </script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --bg: #08090d; --surface: #0f1117; --surface2: #151822; --border: #1e2130; --text: #e8eaf0; --muted: #6b7280; --accent: #ff0000; --accent2: #ff4444; }
-    body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; min-height: 100vh; }
-    body::before { content: ''; position: fixed; inset: 0; background: radial-gradient(ellipse 60% 40% at 15% 15%, rgba(255,0,0,0.08) 0%, transparent 60%); pointer-events: none; z-index: 0; }
-    .container { max-width: 820px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
-    nav { padding: 20px 0; display: flex; align-items: center; gap: 12px; }
-    nav a { color: var(--muted); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
-    nav a:hover { color: var(--text); }
-    nav span { color: var(--border); }
-    header { padding: 24px 0 36px; }
-    .platform-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,0,0,0.1); border: 1px solid rgba(255,0,0,0.25); color: #ff6666; font-size: 12px; font-weight: 500; padding: 6px 14px; border-radius: 100px; margin-bottom: 16px; }
-    h1 { font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 800; line-height: 1.1; margin-bottom: 12px; }
-    h1 em { font-style: normal; color: #ff6666; }
-    .subtitle { color: var(--muted); font-size: 0.95rem; line-height: 1.6; max-width: 520px; }
-    .ad-slot { background: var(--surface); border: 1px dashed var(--border); border-radius: 12px; padding: 16px; text-align: center; color: var(--muted); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; margin: 28px 0; min-height: 90px; display: flex; align-items: center; justify-content: center; }
-    .tool-card { background: var(--surface); border: 1px solid var(--border); border-radius: 24px; padding: 32px; margin-bottom: 28px; }
-    .section-label { font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
-    .niches { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
-    .niche-btn { background: var(--surface2); border: 1px solid var(--border); color: var(--muted); font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 500; padding: 9px 18px; border-radius: 100px; cursor: pointer; transition: all 0.15s; }
-    .niche-btn:hover { border-color: #ff6666; color: var(--text); }
-    .niche-btn.active { background: var(--accent); border-color: var(--accent); color: white; }
-    .custom-input-wrap { display: flex; gap: 12px; margin-bottom: 28px; }
-    .custom-input { flex: 1; background: var(--surface2); border: 1px solid var(--border); border-radius: 12px; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; padding: 12px 18px; outline: none; transition: border-color 0.2s; }
-    .custom-input:focus { border-color: #ff6666; }
-    .custom-input::placeholder { color: var(--muted); }
-    .generate-btn { background: linear-gradient(135deg, var(--accent), var(--accent2)); color: white; border: none; font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 700; padding: 12px 28px; border-radius: 12px; cursor: pointer; transition: opacity 0.2s, transform 0.1s; white-space: nowrap; }
-    .generate-btn:hover { opacity: 0.9; transform: translateY(-1px); }
-    .results-wrap { display: none; }
-    .results-wrap.visible { display: block; }
-    .results-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
-    .results-count { font-family: 'Syne', sans-serif; font-size: 0.95rem; font-weight: 700; }
-    .results-count span { color: #ff6666; }
-    .copy-btn { background: var(--surface2); border: 1px solid var(--border); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 500; padding: 8px 18px; border-radius: 100px; cursor: pointer; transition: all 0.15s; }
-    .copy-btn:hover { border-color: #ff6666; color: #ff6666; }
-    .copy-btn.copied { background: #16a34a; border-color: #16a34a; color: white; }
-    .hashtag-box { background: var(--surface2); border: 1px solid var(--border); border-radius: 16px; padding: 20px; font-size: 0.9rem; line-height: 2; color: #fca5a5; word-break: break-word; min-height: 80px; }
-    .tip-card { background: rgba(255,0,0,0.05); border: 1px solid rgba(255,0,0,0.15); border-radius: 16px; padding: 20px; margin-top: 20px; }
-    .tip-card h3 { font-size: 0.9rem; font-weight: 600; margin-bottom: 8px; }
-    .tip-card p { color: var(--muted); font-size: 0.83rem; line-height: 1.7; }
-    .where-banner { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; margin-bottom: 28px; }
-    .where-banner h3 { font-family: 'Syne', sans-serif; font-size: 1rem; margin-bottom: 16px; }
-    .where-items { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .where-item { background: var(--surface2); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
-    .where-item .label { font-size: 0.78rem; font-weight: 600; color: #ff6666; margin-bottom: 4px; letter-spacing: 0.5px; }
-    .where-item .desc { color: var(--muted); font-size: 0.8rem; line-height: 1.5; }
-    .info-section { margin: 40px 0; }
-    .info-section h2 { font-family: 'Syne', sans-serif; font-size: 1.3rem; margin-bottom: 12px; }
-    .info-section p { color: var(--muted); font-size: 0.88rem; line-height: 1.7; margin-bottom: 10px; }
-    footer { text-align: center; padding: 32px 0; color: var(--muted); font-size: 0.82rem; border-top: 1px solid var(--border); }
-    footer a { color: var(--muted); text-decoration: none; }
-    footer a:hover { color: var(--text); }
-    @media (max-width: 520px) { .custom-input-wrap { flex-direction: column; } .where-items { grid-template-columns: 1fr; } .tool-card { padding: 24px 20px; } }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Generador de hashtags para YouTube</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
+
 <body>
-<div class="container">
+  <header class="top">
+    <div class="container">
+      <a class="brand" href="../index.html">
+        <span class="brand__logo">#</span>
+        <span class="brand__name">HashtagHub</span>
+      </a>
 
-  <nav>
-    <a href="index.html">← All Tools</a>
-    <span>/</span>
-    <a href="#">YouTube Hashtags</a>
-  </nav>
-
-  <header>
-    <div class="platform-tag">▶️ YouTube</div>
-    <h1>YouTube Hashtag<br><em>Generator</em> 2025</h1>
-    <p class="subtitle">Improve your video SEO and get discovered by new viewers. Generate the right hashtags for your YouTube channel — free and instant.</p>
+      <nav class="nav">
+        <a class="nav__link" href="../index.html#generadores">Generadores</a>
+        <a class="nav__link" href="../index.html#ads">Publicidad</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="ad-slot"><!-- Google AdSense -->Advertisement</div>
+  <main class="container" style="padding: 1.6rem 0 2rem;">
+    <h1><i class="fa-brands fa-youtube"></i> Generador para YouTube</h1>
+    <p>YouTube permite hasta 15 hashtags; si te pasas, se pueden ignorar. [web:21]</p>
 
-  <div class="where-banner">
-    <h3>Where to add hashtags on YouTube</h3>
-    <div class="where-items">
-      <div class="where-item">
-        <div class="label">📌 In the Title</div>
-        <div class="desc">Add 1 hashtag in your video title for maximum visibility in search results.</div>
+    <section class="ads__box" style="margin: 1rem 0;">
+      <label for="texto" style="font-weight:800;">Tu video (tema / palabras clave / ciudad)</label>
+      <textarea id="texto" rows="5" style="width:100%; margin-top:.5rem; padding:.8rem; border-radius:14px; border:1px solid rgba(255,255,255,.12); background: rgba(0,0,0,.18); color: rgba(255,255,255,.92);"></textarea>
+
+      <div style="display:flex; gap:.8rem; flex-wrap:wrap; margin-top:.9rem;">
+        <button id="btnGenerar" class="btn btn--primary" type="button">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> Generar
+        </button>
+        <button id="btnCopiar" class="btn btn--ghost" type="button">
+          <i class="fa-regular fa-copy"></i> Copiar
+        </button>
+        <a class="btn btn--ghost" href="../index.html">
+          <i class="fa-solid fa-arrow-left"></i> Volver
+        </a>
       </div>
-      <div class="where-item">
-        <div class="label">📝 In the Description</div>
-        <div class="desc">Add 3–5 hashtags at the top of your description. YouTube shows the first 3 above your title.</div>
+
+      <div style="margin-top:1rem;">
+        <label for="salida" style="font-weight:800;">Hashtags (máx. 15)</label>
+        <textarea id="salida" rows="6" readonly style="width:100%; margin-top:.5rem; padding:.8rem; border-radius:14px; border:1px solid rgba(255,255,255,.12); background: rgba(0,0,0,.18); color: rgba(255,255,255,.92);"></textarea>
+        <p class="muted" style="margin-top:.6rem;">Tip: usa hashtags legibles en varias palabras (CamelCase), ej: #MarketingDigital.</p>
       </div>
-    </div>
-  </div>
+    </section>
+  </main>
 
-  <div class="tool-card">
-    <p class="section-label">1 · Choose your niche</p>
-    <div class="niches">
-      <button class="niche-btn" data-niche="tutorial">🎓 Tutorials</button>
-      <button class="niche-btn" data-niche="gaming">🎮 Gaming</button>
-      <button class="niche-btn" data-niche="vlog">🎥 Vlog</button>
-      <button class="niche-btn" data-niche="fitness">💪 Fitness</button>
-      <button class="niche-btn" data-niche="finance">💰 Finance</button>
-      <button class="niche-btn" data-niche="tech">💻 Tech</button>
-      <button class="niche-btn" data-niche="cooking">🍳 Cooking</button>
-      <button class="niche-btn" data-niche="music">🎵 Music</button>
-    </div>
+  <script src="../assets/app.js"></script>
+  <script>
+    const BASE_YT = ["youtube", "youtubeshorts", "tutorial", "tips"];
+    const STOP = new Set(["de","la","el","y","o","para","por","con","sin","una","un","unas","unos","en","a","al","del","que","como","es","mi","tu","sus","se","lo"]);
 
-    <p class="section-label">2 · Or type your video topic (optional)</p>
-    <div class="custom-input-wrap">
-      <input class="custom-input" id="customTopic" type="text" placeholder="e.g. how to invest, web design tips...">
-      <button class="generate-btn" onclick="generate()">Generate Hashtags</button>
-    </div>
-
-    <div class="results-wrap" id="results">
-      <div class="results-header">
-        <div class="results-count">Generated <span id="hashCount">0</span> hashtags</div>
-        <button class="copy-btn" id="copyBtn" onclick="copyAll()">Copy All</button>
-      </div>
-      <div class="hashtag-box" id="hashtagBox"></div>
-      <div class="tip-card">
-        <h3>▶️ YouTube Pro Tip</h3>
-        <p id="tipText"></p>
-      </div>
-    </div>
-  </div>
-
-  <div class="ad-slot"><!-- Google AdSense -->Advertisement</div>
-
-  <div class="info-section">
-    <h2>Do YouTube hashtags help you get more views?</h2>
-    <p>Yes, but YouTube hashtags work differently from other platforms. YouTube shows the first 3 hashtags you add to your description directly above your video title as clickable links — this places your video inside topic-based playlists that YouTube actively promotes.</p>
-    <p>YouTube recommends using no more than 15 hashtags. Using more than 15 can result in YouTube ignoring all your hashtags entirely, so quality over quantity is essential here.</p>
-    <p>The most impactful strategy is to use a broad hashtag (#tutorial), a niche one (#webdevelopment), and your brand name (#yourchannelname) — this combination maximizes both discoverability and brand building.</p>
-  </div>
-
-</div>
-
-<footer>
-  <p>© 2025 <a href="https://xailon.site">xailon.site</a> · Free Hashtag Generator · <a href="#">Privacy Policy</a></p>
-</footer>
-
-<script>
-  const hashtagData = {
-    tutorial: { tags: ["#tutorial","#howto","#learn","#tips","#beginner","#stepbystep","#guide","#education","#onlinelearning","#freecourse","#skillbuilding","#youtube","#youtuber","#youtubetips","#subscribe"], tip: "YouTube tutorials that solve one very specific problem in under 10 minutes consistently outrank broad 'everything you need to know' videos." },
-    gaming: { tags: ["#gaming","#gamer","#gameplay","#youtube","#youtubegaming","#ps5","#xbox","#pcgaming","#streamer","#twitch","#esports","#gamingchannel","#gamingcommunity","#walkthrough","#gamereview"], tip: "Gaming reaction videos, speedruns and first-playthrough content consistently get the highest watch time on YouTube gaming." },
-    vlog: { tags: ["#vlog","#vlogger","#dailyvlog","#youtube","#youtuber","#lifestyle","#dayinmylife","#travel","#adventure","#contentcreator","#youtubechannel","#vlogging","#realtalk","#dayinthelife","#youtube2025"], tip: "Daily vlogs with a specific theme ('Day in My Life as a Freelancer in Colombia') outperform generic lifestyle vlogs by a wide margin." },
-    fitness: { tags: ["#fitness","#workout","#gym","#youtube","#fitnesstips","#weightloss","#exercise","#health","#bodybuilding","#motivation","#personaltrainer","#fitnessyoutube","#homeworkout","#training","#transform"], tip: "Workout videos with clear results (before/after, specific goals like '30-day challenge') consistently get higher click-through rates." },
-    finance: { tags: ["#finance","#money","#investing","#youtube","#personalfinance","#passiveincome","#financetips","#stockmarket","#budgeting","#wealthbuilding","#financefreedom","#investment","#dividends","#realestate","#crypto"], tip: "Finance videos that use specific dollar amounts in the thumbnail consistently get 2–3x higher click-through rates on YouTube." },
-    tech: { tags: ["#tech","#technology","#programming","#coding","#software","#ai","#artificialintelligence","#youtube","#developer","#webdev","#tutorial","#techreview","#gadgets","#innovation","#techtips"], tip: "Tech product reviews and 'X vs Y' comparison videos are the highest-converting content format for affiliate revenue and channel growth." },
-    cooking: { tags: ["#cooking","#recipe","#food","#youtube","#homecooking","#easyrecipe","#healthyeating","#mealprep","#baking","#foodie","#cookingtips","#kitchentips","#dinnerideas","#foodlover","#cook"], tip: "Recipe videos that show the final dish in the first 3 seconds and promise a specific benefit ('ready in 15 minutes') get the highest retention." },
-    music: { tags: ["#music","#youtube","#musician","#original","#cover","#song","#artist","#piano","#guitar","#singing","#producer","#beats","#newmusic","#musicvideo","#musicproduction"], tip: "Music cover videos of trending songs can rank quickly if uploaded within the first 48 hours of a song going viral on other platforms." }
-  };
-
-  let selectedNiche = null;
-  document.querySelectorAll('.niche-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-      document.querySelectorAll('.niche-btn').forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
-      selectedNiche = this.dataset.niche;
-    });
-  });
-
-  function generate() {
-    const customTopic = document.getElementById('customTopic').value.trim();
-    let tags = [], tip = "Use 3–5 hashtags in your description. YouTube shows the first 3 above your title — make them count.";
-
-    if (selectedNiche && hashtagData[selectedNiche]) {
-      tags = [...hashtagData[selectedNiche].tags];
-      tip = hashtagData[selectedNiche].tip;
-    } else if (customTopic) {
-      const t = customTopic.toLowerCase().replace(/\s+/g,'');
-      tags = [`#${t}`,`#${t}tips`,`#${t}tutorial`,"#youtube","#howto","#learn","#tips","#subscribe","#youtuber","#contentcreator","#video","#youtube2025","#grow","#educational","#guide"];
-    } else {
-      alert('Please select a niche or type a topic first!');
-      return;
+    function normalizar(s){
+      return (s || "")
+        .toLowerCase()
+        .normalize("NFD").replace(/[̀-ͯ]/g, "")
+        .replace(/[^a-z0-9s]/g, " ")
+        .replace(/s+/g, " ")
+        .trim();
     }
 
-    document.getElementById('hashtagBox').textContent = tags.join(' ');
-    document.getElementById('hashCount').textContent = tags.length;
-    document.getElementById('tipText').textContent = tip;
-    const copyBtn = document.getElementById('copyBtn');
-    copyBtn.textContent = 'Copy All'; copyBtn.className = 'copy-btn';
-    const results = document.getElementById('results');
-    results.classList.add('visible');
-    results.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }
+    function tokens(s){
+      return normalizar(s).split(" ").filter(w => w && w.length >= 3 && !STOP.has(w));
+    }
 
-  function copyAll() {
-    navigator.clipboard.writeText(document.getElementById('hashtagBox').textContent).then(() => {
-      const btn = document.getElementById('copyBtn');
-      btn.textContent = '✓ Copied!'; btn.classList.add('copied');
-      setTimeout(() => { btn.textContent = 'Copy All'; btn.classList.remove('copied'); }, 2000);
+    function toCamelCase(words){
+      return words
+        .filter(Boolean)
+        .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+        .join("");
+    }
+
+    function hashtagCamel(phrase){
+      const parts = phrase.split(" ").filter(Boolean);
+      return "#" + toCamelCase(parts);
+    }
+
+    function generarHashtags(texto){
+      const t = [...new Set(tokens(texto))];
+
+      const phrases = [
+        ...BASE_YT,
+        ...t.slice(0,10),
+        ...t.slice(0,3).map(w => w + " colombia"),
+        ...t.slice(0,3).map(w => "como " + w)
+      ];
+
+      const tags = phrases
+        .map(p => hashtagCamel(p))
+        .filter(h => h.length > 2);
+
+      return [...new Set(tags)].slice(0,15).join(" ");
+    }
+
+    document.getElementById("btnGenerar").addEventListener("click", () => {
+      const texto = document.getElementById("texto").value;
+      document.getElementById("salida").value = generarHashtags(texto);
     });
-  }
-</script>
+
+    document.getElementById("btnCopiar").addEventListener("click", async () => {
+      const out = document.getElementById("salida").value;
+      if(!out) return;
+      try{
+        await navigator.clipboard.writeText(out);
+      }catch(e){
+        const el = document.getElementById("salida");
+        el.focus(); el.select();
+        document.execCommand("copy");
+      }
+    });
+  </script>
 </body>
 </html>
