@@ -153,17 +153,17 @@ Pick your niche, generate up to 30 optimized hashtags, copy and paste into your 
 <div class="card">
 
 <div class="niches">
-<button class="niche-btn" onclick="selectNiche('fitness')">Fitness</button>
-<button class="niche-btn" onclick="selectNiche('fashion')">Fashion</button>
-<button class="niche-btn" onclick="selectNiche('business')">Business</button>
-<button class="niche-btn" onclick="selectNiche('travel')">Travel</button>
-<button class="niche-btn" onclick="selectNiche('food')">Food</button>
+<button class="niche-btn" onclick="selectNiche(event,'fitness')">💪 Fitness</button>
+<button class="niche-btn" onclick="selectNiche(event,'fashion')">👗 Fashion</button>
+<button class="niche-btn" onclick="selectNiche(event,'business')">💼 Business</button>
+<button class="niche-btn" onclick="selectNiche(event,'travel')">✈️ Travel</button>
+<button class="niche-btn" onclick="selectNiche(event,'food')">🍔 Food</button>
 </div>
 
-<button class="generate-btn" onclick="generateHashtags()">Generate Hashtags</button>
+<button class="generate-btn" onclick="generateHashtags()">🚀 Generate Hashtags</button>
 
 <div id="output" class="output" style="display:none;"></div>
-<button id="copyBtn" class="copy-btn" style="display:none;" onclick="copyHashtags()">Copy Hashtags</button>
+<button id="copyBtn" class="copy-btn" style="display:none;" onclick="copyHashtags()">📋 Copy Hashtags</button>
 
 </div>
 
@@ -188,7 +188,7 @@ travel: ["#travel","#wanderlust","#travelgram","#vacation","#explore","#adventur
 food: ["#food","#foodie","#instafood","#delicious","#yummy","#foodphotography","#dinner","#lunch","#breakfast","#restaurant","#chef","#tasty","#foodlover","#homemade","#healthyfood","#cooking","#recipe","#dessert","#snack","#eat","#foodblogger","#foodstagram","#gourmet","#sweet","#fresh","#foodpics","#mealtime","#foodgram","#foodaddict","#nutrition"]
 };
 
-function selectNiche(niche){
+function selectNiche(event,niche){
 selectedNiche = niche;
 document.querySelectorAll(".niche-btn").forEach(btn=>btn.classList.remove("active"));
 event.target.classList.add("active");
