@@ -8,32 +8,30 @@
   <meta name="robots" content="index, follow" />
   <meta name="keywords" content="hashtag generator, free hashtags, instagram hashtags, tiktok hashtags, linkedin hashtags, youtube hashtags" />
   <link rel="canonical" href="https://tools.xailon.site/" />
+
   <!-- Open Graph -->
   <meta property="og:title" content="Free Hashtag Generator 2025 | xailon.site" />
   <meta property="og:description" content="Get the best hashtags for Instagram, TikTok, LinkedIn and YouTube. Free, fast and easy." />
   <meta property="og:url" content="https://tools.xailon.site/" />
   <meta property="og:type" content="website" />
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Hashtag Generator - xailon.site",
-    "url": "https://tools.xailon.site/",
-    "description": "Free hashtag generator for Instagram, TikTok, LinkedIn and YouTube"
-  }
-  </script>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     :root {
       --bg: #08090d;
       --surface: #0f1117;
       --border: #1e2130;
       --text: #e8eaf0;
-      --muted: #6b7280;
+      --muted: #8b93a7;
       --ig: #e1306c;
       --tt: #ff2d55;
       --li: #0a66c2;
@@ -43,74 +41,80 @@
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: 'DM Sans', sans-serif;
+      font-family: 'Inter', sans-serif;
       min-height: 100vh;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
     }
 
-    /* Background mesh */
     body::before {
       content: '';
       position: fixed;
       inset: 0;
       background:
-        radial-gradient(ellipse 60% 40% at 20% 20%, rgba(225,48,108,0.08) 0%, transparent 60%),
-        radial-gradient(ellipse 50% 50% at 80% 80%, rgba(10,102,194,0.07) 0%, transparent 60%);
+        radial-gradient(circle at 20% 20%, rgba(225,48,108,0.08), transparent 60%),
+        radial-gradient(circle at 80% 80%, rgba(10,102,194,0.08), transparent 60%);
       pointer-events: none;
       z-index: 0;
     }
 
-    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
 
     header {
-      padding: 48px 0 32px;
+      padding: 60px 0 40px;
       text-align: center;
     }
 
     .badge {
       display: inline-block;
-      background: rgba(225,48,108,0.12);
-      border: 1px solid rgba(225,48,108,0.3);
-      color: #e1306c;
-      font-size: 11px;
+      background: rgba(225,48,108,0.15);
+      border: 1px solid rgba(225,48,108,0.4);
+      color: var(--ig);
+      font-size: 12px;
       font-weight: 500;
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      padding: 6px 16px;
+      padding: 8px 18px;
       border-radius: 100px;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
 
     h1 {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(1.7rem, 8vw, 3.5rem);
-      font-weight: 800;
-      line-height: 1.15;
-      letter-spacing: -0.5px;
-      margin-bottom: 16px;
+      font-family: 'Poppins', sans-serif;
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
     }
 
     h1 span {
-      color: #e1306c;
+      color: var(--ig);
     }
 
     .subtitle {
       color: var(--muted);
-      font-size: 1.05rem;
-      max-width: 520px;
+      font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+      max-width: 620px;
       margin: 0 auto 48px;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
-    /* AdSense placeholder top */
     .ad-slot {
       background: var(--surface);
       border: 1px dashed var(--border);
-      border-radius: 12px;
-      padding: 20px;
+      border-radius: 16px;
+      padding: 24px;
       text-align: center;
       color: var(--muted);
-      font-size: 12px;
+      font-size: 13px;
       letter-spacing: 1px;
       text-transform: uppercase;
       margin-bottom: 48px;
@@ -122,20 +126,20 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
       margin-bottom: 48px;
     }
 
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 20px;
+      border-radius: 24px;
       padding: 32px 24px;
       text-align: center;
       text-decoration: none;
       color: var(--text);
-      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+      transition: all 0.25s ease;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -143,20 +147,18 @@
     }
 
     .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+      transform: translateY(-6px);
+      box-shadow: 0 25px 70px rgba(0,0,0,0.5);
     }
 
-    .card.ig:hover { border-color: var(--ig); box-shadow: 0 20px 60px rgba(225,48,108,0.2); }
-    .card.tt:hover { border-color: var(--tt); box-shadow: 0 20px 60px rgba(255,45,85,0.2); }
-    .card.li:hover { border-color: var(--li); box-shadow: 0 20px 60px rgba(10,102,194,0.2); }
-    .card.yt:hover { border-color: var(--yt); box-shadow: 0 20px 60px rgba(255,0,0,0.2); }
-
     .card-icon {
-      width: 56px; height: 56px;
-      border-radius: 16px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 26px;
+      width: 60px;
+      height: 60px;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
     }
 
     .card.ig .card-icon { background: rgba(225,48,108,0.15); }
@@ -165,23 +167,26 @@
     .card.yt .card-icon { background: rgba(255,0,0,0.15); }
 
     .card-name {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Poppins', sans-serif;
       font-size: 1.15rem;
-      font-weight: 700;
+      font-weight: 600;
     }
 
-    .card-desc { color: var(--muted); font-size: 0.85rem; line-height: 1.5; }
+    .card-desc {
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
 
     .card-cta {
-      margin-top: 8px;
-      font-size: 0.8rem;
+      margin-top: 10px;
+      font-size: 0.85rem;
       font-weight: 500;
-      letter-spacing: 0.5px;
-      padding: 8px 20px;
+      padding: 8px 22px;
       border-radius: 100px;
       border: 1px solid var(--border);
       color: var(--muted);
-      transition: all 0.2s;
+      transition: all 0.2s ease;
     }
 
     .card.ig:hover .card-cta { background: var(--ig); border-color: var(--ig); color: white; }
@@ -192,34 +197,62 @@
     .faq {
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 36px;
-      margin-bottom: 48px;
+      border-radius: 24px;
+      padding: 40px;
+      margin-bottom: 60px;
     }
 
     .faq h2 {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.4rem;
-      margin-bottom: 24px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.6rem;
+      margin-bottom: 28px;
     }
 
-    .faq-item { margin-bottom: 20px; }
-    .faq-item h3 { font-size: 0.95rem; font-weight: 500; margin-bottom: 6px; }
-    .faq-item p { color: var(--muted); font-size: 0.88rem; line-height: 1.6; }
+    .faq-item {
+      margin-bottom: 22px;
+    }
+
+    .faq-item h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .faq-item p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
 
     footer {
       text-align: center;
-      padding: 32px 0;
+      padding: 40px 0;
       color: var(--muted);
-      font-size: 0.82rem;
+      font-size: 0.85rem;
       border-top: 1px solid var(--border);
     }
 
-    footer a { color: var(--muted); text-decoration: none; }
-    footer a:hover { color: var(--text); }
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--text);
+    }
 
     @media (max-width: 480px) {
-      .grid { grid-template-columns: 1fr 1fr; }
+      header {
+        padding: 40px 0 24px;
+      }
+
+      h1 {
+        font-size: 1.9rem;
+      }
+
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
     }
   </style>
 </head>
@@ -228,12 +261,12 @@
     <header>
       <div class="badge">100% Free Tool</div>
       <h1>Free <span>Hashtag</span><br>Generator 2025</h1>
-      <p class="subtitle">Get the best hashtags for your niche in seconds. Boost your reach on Instagram, TikTok, LinkedIn and YouTube — no signup required.</p>
+      <p class="subtitle">
+        Get the best hashtags for your niche in seconds. Boost your reach on Instagram, TikTok, LinkedIn and YouTube — no signup required.
+      </p>
     </header>
 
-    <!-- AdSense Top -->
     <div class="ad-slot">
-      <!-- Google AdSense — replace with your ad code -->
       Advertisement
     </div>
 
@@ -244,18 +277,21 @@
         <div class="card-desc">Up to 30 hashtags to maximize your reach and explore page visibility.</div>
         <div class="card-cta">Generate →</div>
       </a>
+
       <a href="tiktok.html" class="card tt">
         <div class="card-icon">🎵</div>
         <div class="card-name">TikTok</div>
         <div class="card-desc">Trending hashtags to get your videos on the For You Page fast.</div>
         <div class="card-cta">Generate →</div>
       </a>
+
       <a href="linkedin.html" class="card li">
         <div class="card-icon">💼</div>
         <div class="card-name">LinkedIn</div>
         <div class="card-desc">Professional hashtags to grow your network and personal brand.</div>
         <div class="card-cta">Generate →</div>
       </a>
+
       <a href="youtube.html" class="card yt">
         <div class="card-icon">▶️</div>
         <div class="card-name">YouTube</div>
@@ -264,29 +300,31 @@
       </a>
     </div>
 
-    <!-- AdSense Middle -->
     <div class="ad-slot">
-      <!-- Google AdSense — replace with your ad code -->
       Advertisement
     </div>
 
     <div class="faq">
       <h2>Frequently Asked Questions</h2>
+
       <div class="faq-item">
         <h3>How many hashtags should I use on Instagram?</h3>
         <p>Instagram allows up to 30 hashtags per post. Using 10–20 targeted hashtags tends to perform better than maxing out with irrelevant ones.</p>
       </div>
+
       <div class="faq-item">
         <h3>Do hashtags work on TikTok?</h3>
         <p>Yes. TikTok hashtags help the algorithm understand your content and show it to the right audience. Use 3–5 niche-specific hashtags for best results.</p>
       </div>
+
       <div class="faq-item">
         <h3>Are hashtags useful on LinkedIn?</h3>
         <p>Absolutely. LinkedIn hashtags increase the discoverability of your posts among professionals in your industry. Use 3–5 relevant hashtags per post.</p>
       </div>
+
       <div class="faq-item">
         <h3>Do YouTube hashtags help with SEO?</h3>
-        <p>Yes. YouTube shows up to 3 hashtags above your video title, and they appear as clickable links that help users find related content.</p>
+        <p>Yes. YouTube shows up to 3 hashtags above your video title and they appear as clickable links that help users find related content.</p>
       </div>
     </div>
   </div>
