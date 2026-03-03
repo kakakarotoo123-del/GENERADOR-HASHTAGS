@@ -1,247 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Instagram Hashtag Generator 2026 — Free & Instant | xailon.site</title>
-  <meta name="description" content="Generate the best Instagram hashtags for your niche in seconds. Free hashtag generator for fashion, fitness, food, travel, business and more. Boost your reach today." />
-  <meta name="robots" content="index, follow" />
-  <meta name="keywords" content="instagram hashtag generator, free instagram hashtags, best hashtags for instagram, hashtags for likes, instagram reach" />
-  <link rel="canonical" href="https://tools.xailon.site/instagram.html" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instagram Hashtag Generator 2026 — Free Tool</title>
+<meta name="description" content="Generate the best Instagram hashtags instantly. Free Instagram hashtag generator for fitness, fashion, business, travel and more.">
+<meta name="robots" content="index, follow">
 
-  <meta property="og:title" content="Instagram Hashtag Generator 2026 — Free | xailon.site" />
-  <meta property="og:description" content="Get the best Instagram hashtags for your niche instantly. 100% free." />
-  <meta property="og:url" content="https://tools.xailon.site/instagram.html" />
-  <meta property="og:type" content="website" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Instagram Hashtag Generator",
-    "url": "https://tools.xailon.site/instagram.html",
-    "description": "Free Instagram hashtag generator for any niche",
-    "applicationCategory": "UtilityApplication",
-    "operatingSystem": "Web"
-  }
-  </script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
 
-  <!-- Stripe style fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+body{
+background:#07080c;
+color:#e8eaf0;
+font-family:'Inter',sans-serif;
+min-height:100vh;
+padding:20px;
+-webkit-font-smoothing:antialiased;
+}
 
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+.container{
+max-width:800px;
+margin:auto;
+}
 
-    :root {
-      --bg: #07080c;
-      --surface: #0f1117;
-      --surface2: #151822;
-      --border: #1e2130;
-      --text: #e8eaf0;
-      --muted: #8b93a7;
-      --accent: #e1306c;
-    }
+nav{
+margin-bottom:40px;
+font-size:14px;
+color:#8b93a7;
+}
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Inter', sans-serif;
-      min-height: 100vh;
-      -webkit-font-smoothing: antialiased;
-    }
+h1{
+font-family:'Poppins',sans-serif;
+font-size:clamp(2rem,5vw,3.2rem);
+font-weight:800;
+line-height:1.1;
+margin-bottom:16px;
+background:linear-gradient(90deg,#ffffff,#ff8ac7,#b4b9ff,#ffffff);
+background-size:200% auto;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:shine 6s linear infinite;
+}
 
-    body::before {
-      content: '';
-      position: fixed; inset: 0;
-      background:
-        radial-gradient(circle at 15% 10%, rgba(225,48,108,0.15), transparent 60%),
-        radial-gradient(circle at 85% 85%, rgba(120,119,198,0.15), transparent 60%);
-      pointer-events: none;
-      z-index: 0;
-    }
+@keyframes shine{
+to{background-position:200% center;}
+}
 
-    .container { max-width: 820px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+.subtitle{
+color:#8b93a7;
+margin-bottom:40px;
+line-height:1.6;
+}
 
-    nav {
-      padding: 20px 0;
-      display: flex; align-items: center; gap: 12px;
-      font-size: 0.9rem;
-    }
+.card{
+background:#11131a;
+border:1px solid #1e2130;
+border-radius:20px;
+padding:30px;
+margin-bottom:30px;
+}
 
-    nav a {
-      color: var(--muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
+.niches{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-bottom:20px;
+}
 
-    nav a:hover { color: white; }
+.niche-btn{
+background:#151822;
+border:1px solid #1e2130;
+color:#8b93a7;
+padding:8px 16px;
+border-radius:50px;
+cursor:pointer;
+transition:.2s;
+font-size:14px;
+}
 
-    header { padding: 40px 0 50px; }
+.niche-btn:hover{
+border-color:#e1306c;
+color:#fff;
+}
 
-    .platform-tag {
-      display: inline-flex;
-      background: rgba(225,48,108,0.15);
-      border: 1px solid rgba(225,48,108,0.4);
-      color: var(--accent);
-      font-size: 12px;
-      padding: 6px 14px;
-      border-radius: 100px;
-      margin-bottom: 20px;
-    }
+.niche-btn.active{
+background:#e1306c;
+color:#fff;
+border-color:#e1306c;
+}
 
-    h1 {
-      font-family: 'Poppins', sans-serif;
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 800;
-      line-height: 1.1;
-      margin-bottom: 16px;
-      background: linear-gradient(90deg, #ffffff, #ff8ac7, #b4b9ff);
-      background-size: 200% auto;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: shine 6s linear infinite;
-    }
+.generate-btn{
+margin-top:20px;
+background:linear-gradient(135deg,#ff8ac7,#e1306c);
+border:none;
+color:#fff;
+padding:12px 30px;
+border-radius:12px;
+cursor:pointer;
+font-weight:700;
+font-family:'Poppins',sans-serif;
+transition:.2s;
+}
 
-    @keyframes shine {
-      to { background-position: 200% center; }
-    }
+.generate-btn:hover{
+transform:translateY(-2px);
+opacity:.9;
+}
 
-    .subtitle {
-      color: var(--muted);
-      font-size: 1rem;
-      line-height: 1.7;
-      max-width: 560px;
-    }
+.output{
+margin-top:30px;
+background:#0f1117;
+padding:20px;
+border-radius:12px;
+border:1px solid #1e2130;
+font-size:14px;
+line-height:1.6;
+word-wrap:break-word;
+}
 
-    .ad-slot {
-      background: var(--surface);
-      border: 1px dashed var(--border);
-      border-radius: 16px;
-      padding: 20px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 12px;
-      margin: 32px 0;
-    }
+.copy-btn{
+margin-top:15px;
+background:#222;
+border:none;
+color:#fff;
+padding:8px 16px;
+border-radius:8px;
+cursor:pointer;
+}
 
-    .tool-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: 32px;
-      margin-bottom: 32px;
-    }
-
-    .section-label {
-      font-size: 11px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 14px;
-    }
-
-    .niches {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 28px;
-    }
-
-    .niche-btn {
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 0.85rem;
-      padding: 9px 18px;
-      border-radius: 100px;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-
-    .niche-btn:hover {
-      border-color: var(--accent);
-      color: white;
-    }
-
-    .niche-btn.active {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: white;
-    }
-
-    .custom-input-wrap {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 28px;
-    }
-
-    .custom-input {
-      flex: 1;
-      background: var(--surface2);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      color: white;
-      padding: 12px 18px;
-      outline: none;
-    }
-
-    .custom-input:focus {
-      border-color: var(--accent);
-    }
-
-    .generate-btn {
-      background: linear-gradient(135deg, #ff8ac7, #e1306c);
-      color: white;
-      border: none;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      padding: 12px 28px;
-      border-radius: 14px;
-      cursor: pointer;
-      transition: 0.2s;
-    }
-
-    .generate-btn:hover {
-      transform: translateY(-2px);
-      opacity: 0.9;
-    }
-
-    footer {
-      text-align: center;
-      padding: 40px 0;
-      color: var(--muted);
-      font-size: 0.9rem;
-      border-top: 1px solid var(--border);
-    }
-
-    footer a { color: var(--muted); text-decoration: none; }
-    footer a:hover { color: white; }
-
-    @media (max-width: 520px) {
-      .custom-input-wrap { flex-direction: column; }
-      .tool-card { padding: 24px 20px; }
-    }
-  </style>
+footer{
+margin-top:50px;
+text-align:center;
+color:#8b93a7;
+font-size:14px;
+}
+</style>
 </head>
 
 <body>
 <div class="container">
 
-<nav>
-  <a href="index.html">← All Tools</a>
-  <span>/</span>
-  <a href="#">Instagram Hashtags</a>
-</nav>
+<nav>← All Tools / Instagram Hashtags</nav>
 
-<header>
-  <div class="platform-tag">📸 Instagram</div>
-  <h1>Instagram Hashtag Generator 2026</h1>
-  <p class="subtitle">
-    Pick your niche, generate up to 30 optimized hashtags, copy and paste into your Instagram post. Free forever.
-  </p>
-</header>
+<h1>Instagram Hashtag Generator 2026</h1>
+<p class="subtitle">
+Pick your niche, generate up to 30 optimized hashtags, copy and paste into your Instagram post. Free forever.
+</p>
 
-<div class="ad-slot">Advertisement</div>
+<div class="card">
 
-<!-- TU JS ORIGINAL SIGUE EXACTAMENTE IGUAL DESDE AQUÍ -->
+<div class="niches">
+<button class="niche-btn" onclick="selectNiche('fitness')">Fitness</button>
+<button class="niche-btn" onclick="selectNiche('fashion')">Fashion</button>
+<button class="niche-btn" onclick="selectNiche('business')">Business</button>
+<button class="niche-btn" onclick="selectNiche('travel')">Travel</button>
+<button class="niche-btn" onclick="selectNiche('food')">Food</button>
+</div>
+
+<button class="generate-btn" onclick="generateHashtags()">Generate Hashtags</button>
+
+<div id="output" class="output" style="display:none;"></div>
+<button id="copyBtn" class="copy-btn" style="display:none;" onclick="copyHashtags()">Copy Hashtags</button>
+
+</div>
+
+<footer>
+© 2026 xailon.site — Free Instagram Tools
+</footer>
+
+</div>
+
+<script>
+let selectedNiche = "";
+
+const hashtags = {
+fitness: ["#fitness","#gym","#workout","#fitlife","#training","#health","#motivation","#fitnessmotivation","#bodybuilding","#gymlife","#cardio","#strong","#fit","#healthy","#exercise","#personaltrainer","#muscle","#abs","#fitnessmodel","#lifestyle","#fitnessaddict","#fitfam","#healthylifestyle","#weightloss","#nutrition","#gains","#instafit","#fitnessjourney","#fitnessgoals","#trainhard"],
+
+fashion: ["#fashion","#style","#outfit","#ootd","#fashionista","#instastyle","#streetstyle","#trend","#model","#fashionblogger","#look","#beauty","#clothes","#shopping","#designer","#luxury","#vogue","#fashionstyle","#styleinspo","#trendy","#instafashion","#lookbook","#fashiongram","#chic","#runway","#stylish","#fashionaddict","#fashiontrend","#glam","#fashionweek"],
+
+business: ["#business","#entrepreneur","#success","#startup","#marketing","#branding","#digitalmarketing","#hustle","#motivation","#leadership","#money","#investing","#ceo","#mindset","#goals","#onlinebusiness","#sales","#smallbusiness","#growth","#finance","#work","#innovation","#strategy","#network","#entrepreneurship","#businesstips","#productivity","#wealth","#mindsetmatters","#sidehustle"],
+
+travel: ["#travel","#wanderlust","#travelgram","#vacation","#explore","#adventure","#trip","#nature","#holiday","#travelling","#tourism","#backpacking","#photography","#travelphotography","#instatravel","#travelblogger","#beach","#mountains","#passport","#world","#traveladdict","#explorer","#traveltheworld","#sunset","#culture","#journey","#discover","#travelgoals","#travelmore","#roam"],
+
+food: ["#food","#foodie","#instafood","#delicious","#yummy","#foodphotography","#dinner","#lunch","#breakfast","#restaurant","#chef","#tasty","#foodlover","#homemade","#healthyfood","#cooking","#recipe","#dessert","#snack","#eat","#foodblogger","#foodstagram","#gourmet","#sweet","#fresh","#foodpics","#mealtime","#foodgram","#foodaddict","#nutrition"]
+};
+
+function selectNiche(niche){
+selectedNiche = niche;
+document.querySelectorAll(".niche-btn").forEach(btn=>btn.classList.remove("active"));
+event.target.classList.add("active");
+}
+
+function generateHashtags(){
+if(!selectedNiche){
+alert("Please select a niche first.");
+return;
+}
+
+let result = hashtags[selectedNiche].join(" ");
+document.getElementById("output").style.display="block";
+document.getElementById("copyBtn").style.display="inline-block";
+document.getElementById("output").innerText = result;
+}
+
+function copyHashtags(){
+let text = document.getElementById("output").innerText;
+navigator.clipboard.writeText(text);
+alert("Hashtags copied!");
+}
+</script>
+
+</body>
+</html>
