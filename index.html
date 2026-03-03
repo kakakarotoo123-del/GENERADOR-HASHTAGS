@@ -11,13 +11,11 @@
   <link rel="canonical" href="https://tools.xailon.site/" />
   <meta name="theme-color" content="#08090d" />
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Free Hashtag Generator 2026 | xailon.site" />
   <meta property="og:description" content="Get the best hashtags for Instagram, TikTok, LinkedIn and YouTube. Free, fast and easy." />
   <meta property="og:url" content="https://tools.xailon.site/" />
   <meta property="og:type" content="website" />
 
-  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -38,20 +36,20 @@
 
     :root {
       --bg: #08090d;
-      --surface: rgba(15, 17, 23, 0.78);
-      --surface-2: rgba(15, 17, 23, 0.92);
+      --surface: rgba(15, 17, 23, 0.80);
+      --surface-2: rgba(15, 17, 23, 0.94);
       --border: rgba(255,255,255,0.10);
       --text: #e8eaf0;
-      --muted: rgba(232,234,240,0.68);
+      --muted: rgba(232,234,240,0.70);
 
       --ig: #e1306c;
       --tt: #ff2d55;
       --li: #0a66c2;
       --yt: #ff0000;
 
-      --radius-lg: 22px;
-      --radius-md: 16px;
-      --shadow: 0 20px 60px rgba(0,0,0,0.45);
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --shadow: 0 18px 50px rgba(0,0,0,0.48);
       --container: 980px;
     }
 
@@ -60,7 +58,7 @@
       color: var(--text);
       font-family: "DM Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
       font-size: 16px;
-      line-height: 1.55;
+      line-height: 1.6;
       min-height: 100vh;
       overflow-x: hidden;
       text-rendering: optimizeLegibility;
@@ -68,15 +66,14 @@
       -moz-osx-font-smoothing: grayscale;
     }
 
-    /* Background mesh */
     body::before {
       content: "";
       position: fixed;
       inset: 0;
       background:
-        radial-gradient(ellipse 60% 40% at 20% 20%, rgba(225,48,108,0.10) 0%, transparent 60%),
-        radial-gradient(ellipse 55% 45% at 80% 80%, rgba(10,102,194,0.10) 0%, transparent 60%),
-        radial-gradient(ellipse 55% 45% at 80% 10%, rgba(255,45,85,0.06) 0%, transparent 60%);
+        radial-gradient(ellipse 60% 40% at 18% 20%, rgba(225,48,108,0.10) 0%, transparent 60%),
+        radial-gradient(ellipse 55% 45% at 82% 78%, rgba(10,102,194,0.11) 0%, transparent 60%),
+        radial-gradient(ellipse 55% 45% at 82% 12%, rgba(255,45,85,0.06) 0%, transparent 60%);
       pointer-events: none;
       z-index: 0;
     }
@@ -84,14 +81,20 @@
     .container {
       max-width: var(--container);
       margin: 0 auto;
-      padding-inline: clamp(16px, 4vw, 28px);
+      padding-inline: 16px;
       position: relative;
       z-index: 1;
     }
+    @media (min-width: 520px) {
+      .container { padding-inline: 24px; }
+    }
 
     header {
-      padding: clamp(28px, 6vw, 56px) 0 clamp(18px, 4vw, 34px);
+      padding: 34px 0 18px;
       text-align: center;
+    }
+    @media (min-width: 520px) {
+      header { padding: 50px 0 26px; }
     }
 
     .badge {
@@ -103,56 +106,64 @@
       font-weight: 600;
       letter-spacing: 2px;
       text-transform: uppercase;
-      padding: 7px 16px;
+      padding: 7px 14px;
       border-radius: 999px;
-      margin-bottom: 18px;
+      margin-bottom: 14px;
       backdrop-filter: blur(10px);
     }
 
     h1 {
       font-family: "Syne", system-ui, sans-serif;
-      font-size: clamp(1.9rem, 5.2vw, 3.6rem);
+      font-size: 2.0rem;
       font-weight: 800;
       line-height: 1.08;
-      letter-spacing: -0.8px;
-      margin: 0 0 14px;
+      letter-spacing: -0.7px;
+      margin: 0 0 12px;
     }
+    @media (min-width: 420px) { h1 { font-size: 2.35rem; } }
+    @media (min-width: 700px) { h1 { font-size: 3.2rem; } }
 
     h1 span { color: #ff5c95; }
 
     .subtitle {
       color: var(--muted);
-      font-size: clamp(1.02rem, 1.1vw + 0.75rem, 1.18rem);
-      max-width: 58ch;
+      font-size: 1.0rem;
+      line-height: 1.7;
+      max-width: 52ch;
       margin: 0 auto;
+    }
+    @media (min-width: 520px) {
+      .subtitle { font-size: 1.12rem; }
     }
 
     .ad-slot {
       background: var(--surface);
       border: 1px dashed rgba(255,255,255,0.18);
       border-radius: var(--radius-md);
-      padding: 18px;
+      padding: 16px;
       text-align: center;
       color: rgba(232,234,240,0.55);
       font-size: 12px;
       letter-spacing: 1px;
       text-transform: uppercase;
-      margin: clamp(22px, 4vw, 44px) 0;
+      margin: 22px 0;
       min-height: 90px;
       display: grid;
       place-items: center;
       backdrop-filter: blur(10px);
     }
+    @media (min-width: 520px) {
+      .ad-slot { margin: 40px 0; }
+    }
 
-    /* Responsive grid: móvil 1, tablet 2, PC 4 */
     .grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: clamp(14px, 2.2vw, 20px);
-      margin-bottom: clamp(22px, 4vw, 44px);
+      gap: 14px;
+      margin-bottom: 22px;
     }
     @media (min-width: 560px) {
-      .grid { grid-template-columns: repeat(2, 1fr); }
+      .grid { grid-template-columns: repeat(2, 1fr); gap: 18px; margin-bottom: 40px; }
     }
     @media (min-width: 980px) {
       .grid { grid-template-columns: repeat(4, 1fr); }
@@ -162,35 +173,32 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: clamp(18px, 2.6vw, 28px);
+      padding: 18px 16px;
       text-align: center;
       text-decoration: none;
       color: var(--text);
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       backdrop-filter: blur(10px);
-      min-height: 210px;
+      min-height: 200px;
       transform: translateZ(0);
     }
-
-    /* Hover solo si el dispositivo soporta hover real (mejor en móvil/tablet) */
-    @media (hover: hover) and (pointer: fine) {
-      .card { transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, border-color 180ms ease; }
-      .card:hover {
-        transform: translateY(-4px);
-        box-shadow: var(--shadow);
-        background: var(--surface-2);
-      }
-
-      .card.ig:hover { border-color: rgba(225,48,108,0.65); box-shadow: 0 20px 60px rgba(225,48,108,0.18); }
-      .card.tt:hover { border-color: rgba(255,45,85,0.65); box-shadow: 0 20px 60px rgba(255,45,85,0.18); }
-      .card.li:hover { border-color: rgba(10,102,194,0.65); box-shadow: 0 20px 60px rgba(10,102,194,0.18); }
-      .card.yt:hover { border-color: rgba(255,0,0,0.65); box-shadow: 0 20px 60px rgba(255,0,0,0.18); }
+    @media (min-width: 560px) {
+      .card { padding: 24px 18px; min-height: 215px; }
     }
 
-    /* “Press” al tocar/click (micro-interacción suave) */
+    @media (hover: hover) and (pointer: fine) {
+      .card { transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease, border-color 180ms ease; }
+      .card:hover { transform: translateY(-4px); box-shadow: var(--shadow); background: var(--surface-2); }
+
+      .card.ig:hover { border-color: rgba(225,48,108,0.65); box-shadow: 0 18px 50px rgba(225,48,108,0.18); }
+      .card.tt:hover { border-color: rgba(255,45,85,0.65); box-shadow: 0 18px 50px rgba(255,45,85,0.18); }
+      .card.li:hover { border-color: rgba(10,102,194,0.65); box-shadow: 0 18px 50px rgba(10,102,194,0.18); }
+      .card.yt:hover { border-color: rgba(255,0,0,0.65); box-shadow: 0 18px 50px rgba(255,0,0,0.18); }
+    }
+
     .card:active { transform: translateY(-1px) scale(0.99); }
 
     .card:focus-visible {
@@ -199,8 +207,8 @@
     }
 
     .card-icon {
-      width: 56px;
-      height: 56px;
+      width: 54px;
+      height: 54px;
       border-radius: 16px;
       display: grid;
       place-items: center;
@@ -212,31 +220,30 @@
     .card.li .card-icon { background: rgba(10,102,194,0.15); }
     .card.yt .card-icon { background: rgba(255,0,0,0.15); }
 
-    .brand-icon { display: block; width: 26px; height: 26px; }
+    .brand-icon { display: block; width: 26px; height: 26px; filter: drop-shadow(0 8px 18px rgba(0,0,0,0.35)); }
 
     .card-name {
       font-family: "Syne", system-ui, sans-serif;
-      font-size: 1.1rem;
+      font-size: 1.08rem;
       font-weight: 800;
       letter-spacing: -0.2px;
     }
 
     .card-desc {
       color: var(--muted);
-      font-size: 0.92rem;
+      font-size: 0.95rem;
       line-height: 1.55;
-      max-width: 32ch;
+      max-width: 34ch;
     }
 
     .card-cta {
       margin-top: 6px;
-      font-size: 0.86rem;
+      font-size: 0.9rem;
       font-weight: 600;
-      letter-spacing: 0.2px;
-      padding: 9px 18px;
+      padding: 10px 18px;
       border-radius: 999px;
       border: 1px solid rgba(255,255,255,0.14);
-      color: rgba(232,234,240,0.75);
+      color: rgba(232,234,240,0.78);
     }
 
     @media (hover: hover) and (pointer: fine) {
@@ -251,21 +258,24 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: clamp(18px, 3vw, 34px);
-      margin: clamp(22px, 4vw, 44px) 0;
+      padding: 18px;
+      margin: 22px 0 44px;
       backdrop-filter: blur(10px);
+    }
+    @media (min-width: 560px) {
+      .faq { padding: 32px; margin: 40px 0 48px; }
     }
 
     .faq h2 {
       font-family: "Syne", system-ui, sans-serif;
-      font-size: clamp(1.2rem, 1.5vw + 0.8rem, 1.55rem);
-      margin: 0 0 18px;
+      font-size: 1.35rem;
+      margin: 0 0 16px;
       letter-spacing: -0.3px;
     }
 
     .faq-item { margin-bottom: 16px; }
     .faq-item h3 { font-size: 1rem; font-weight: 700; margin: 0 0 6px; }
-    .faq-item p { color: var(--muted); font-size: 0.95rem; margin: 0; }
+    .faq-item p { color: var(--muted); font-size: 0.96rem; margin: 0; }
 
     footer {
       text-align: center;
@@ -287,7 +297,6 @@
       .stagger > .card:nth-child(3) { animation-delay: 140ms; }
       .stagger > .card:nth-child(4) { animation-delay: 190ms; }
     }
-
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(10px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -308,9 +317,7 @@
       <p class="subtitle">Get the best hashtags for your niche in seconds. Boost your reach on Instagram, TikTok, LinkedIn and YouTube — no signup required.</p>
     </header>
 
-    <!-- AdSense Top -->
     <div class="ad-slot">
-      <!-- Google AdSense — replace with your ad code -->
       Advertisement
     </div>
 
@@ -319,8 +326,7 @@
         <div class="card-icon">
           <img class="brand-icon"
                src="https://cdn.simpleicons.org/instagram/ffffff"
-               alt="Instagram"
-               width="26" height="26"
+               alt="Instagram" width="26" height="26"
                loading="lazy" decoding="async">
         </div>
         <div class="card-name">Instagram</div>
@@ -332,8 +338,7 @@
         <div class="card-icon">
           <img class="brand-icon"
                src="https://cdn.simpleicons.org/tiktok/ffffff"
-               alt="TikTok"
-               width="26" height="26"
+               alt="TikTok" width="26" height="26"
                loading="lazy" decoding="async">
         </div>
         <div class="card-name">TikTok</div>
@@ -344,10 +349,10 @@
       <a href="linkedin.html" class="card li" aria-label="Open LinkedIn hashtag generator">
         <div class="card-icon">
           <img class="brand-icon"
-               src="https://cdn.simpleicons.org/linkedin/ffffff"
-               alt="LinkedIn"
-               width="26" height="26"
-               loading="lazy" decoding="async">
+               src="https://cdn.simpleicons.org/linkedinin/ffffff"
+               alt="LinkedIn" width="26" height="26"
+               loading="lazy" decoding="async"
+               onerror="this.style.display='none'">
         </div>
         <div class="card-name">LinkedIn</div>
         <div class="card-desc">Professional hashtags to grow your network and personal brand.</div>
@@ -358,8 +363,7 @@
         <div class="card-icon">
           <img class="brand-icon"
                src="https://cdn.simpleicons.org/youtube/ffffff"
-               alt="YouTube"
-               width="26" height="26"
+               alt="YouTube" width="26" height="26"
                loading="lazy" decoding="async">
         </div>
         <div class="card-name">YouTube</div>
@@ -368,9 +372,7 @@
       </a>
     </div>
 
-    <!-- AdSense Middle -->
     <div class="ad-slot">
-      <!-- Google AdSense — replace with your ad code -->
       Advertisement
     </div>
 
